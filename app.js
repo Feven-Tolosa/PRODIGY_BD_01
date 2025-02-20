@@ -4,10 +4,6 @@ const { v4: uuidv4 } = require('uuid')
 
 const app = express()
 app.use(bodyParser.json())
-
-// In-memory hashmap (object) to store users
-const users = {}
-
 app.get('/', (req, res) => {
   res.send('Hello World')
 })
