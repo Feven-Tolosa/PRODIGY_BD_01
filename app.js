@@ -5,6 +5,11 @@ const { v4: uuidv4 } = require('uuid')
 const app = express()
 app.use(bodyParser.json())
 
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return emailRegex.test(email)
+}
+
 // In-memory hashmap (object) to store users
 const users = {}
 
